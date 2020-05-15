@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "12403036752",
+    "firebase_url": "https://kotlinmessenger-bab13.firebaseio.com",
+    "project_id": "kotlinmessenger-bab13",
+    "storage_bucket": "kotlinmessenger-bab13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12403036752:android:d22db4fb189cabea9b3755",
+        "android_client_info": {
+          "package_name": "lukewithey.example.messaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "12403036752-gjpstv4q8u4noq4k5o3300daa8i7uv3r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBetX0DAkFsWaVqRLJwr81BPjN_28NfDi4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "12403036752-gjpstv4q8u4noq4k5o3300daa8i7uv3r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
