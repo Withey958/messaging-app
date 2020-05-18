@@ -2,7 +2,6 @@ package lukewithey.example.messaging
 
 import android.app.Activity
 import android.content.Intent
-import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -18,7 +17,7 @@ import java.util.*
 
 private const val TAG = "RegisterActivity"
 
-class MainActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -132,6 +131,11 @@ class MainActivity : AppCompatActivity() {
         ref.setValue(user)
             .addOnSuccessListener {
                 Log.d(TAG, "User saved to database")
+
+                // Start Messenger Activity
+                val intent = Intent(this, LatestMessageActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK) // flags avoid going back to the register page onbackpressed CLEARS ACTIVITY STACK
+                startActivity(intent)
             }
             .addOnFailureListener {
                 Log.d(TAG, "Failed to save to database: ${it.message}")
