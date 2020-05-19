@@ -1,4 +1,4 @@
-package lukewithey.example.messaging
+package lukewithey.example.messaging.messages
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.google.firebase.auth.FirebaseAuth
+import lukewithey.example.messaging.R
+import lukewithey.example.messaging.registerlogin.RegisterActivity
 
 
 class LatestMessageActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package lukewithey.example.messaging
+package lukewithey.example.messaging.registerlogin
 
 import android.os.Bundle
 import android.util.Log
@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
+import lukewithey.example.messaging.R
 
 
 private const val TAG = "LoginActivity"

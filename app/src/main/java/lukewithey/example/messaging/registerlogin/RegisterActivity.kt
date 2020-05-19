@@ -1,4 +1,4 @@
-package lukewithey.example.messaging
+package lukewithey.example.messaging.registerlogin
 
 import android.app.Activity
 import android.content.Intent
@@ -13,6 +13,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_register.*
+import lukewithey.example.messaging.R
+import lukewithey.example.messaging.messages.LatestMessageActivity
+import lukewithey.example.messaging.models.User
 import java.util.*
 
 private const val TAG = "RegisterActivity"
@@ -126,7 +129,11 @@ class RegisterActivity : AppCompatActivity() {
 
         val uid = FirebaseAuth.getInstance().uid ?: ""
         val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
-        val user = User(uid, register_username.text.toString(), profileImageUrl)
+        val user = User(
+            uid,
+            register_username.text.toString(),
+            profileImageUrl
+        )
 
         ref.setValue(user)
             .addOnSuccessListener {

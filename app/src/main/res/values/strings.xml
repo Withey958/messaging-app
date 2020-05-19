@@ -10,4 +10,7 @@
     <string name="user_image_button_string">SELECT PHOTO</string>
     <string name="menu_sign_out">Sign Out</string>
     <string name="menu_new_message">New Message</string>
+    <string name="send">SEND</string>
+    <string name="new_message">NEW MESSAGE</string>
+    <string name="hint_user_image">User image</string>
 </resources>
