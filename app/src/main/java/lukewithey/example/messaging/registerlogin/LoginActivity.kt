@@ -1,5 +1,6 @@
 package lukewithey.example.messaging.registerlogin
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -8,6 +9,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 import lukewithey.example.messaging.R
+import lukewithey.example.messaging.messages.LatestMessageActivity
 
 
 private const val TAG = "LoginActivity"
@@ -46,6 +48,11 @@ class LoginActivity: AppCompatActivity() {
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
                         Log.d(TAG, "Login Successful")
+
+                        val intent = Intent(this, LatestMessageActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK) // flags avoid going back to the register page onbackpressed CLEARS ACTIVITY STACK
+                        startActivity(intent)
+
                     }
                 }.addOnFailureListener {
                     Log.d(TAG, "Failed to login user: ${it.message}")
@@ -55,7 +62,6 @@ class LoginActivity: AppCompatActivity() {
                         Snackbar.LENGTH_LONG
                     )
                         .setAction("Action", null).show()
-
                 }
         }
 
